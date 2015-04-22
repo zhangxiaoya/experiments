@@ -54,7 +54,7 @@ alpha_p = zeros(Fisize, prod(patchnum), num);
 result = zeros(num, 6);
 
 %%******************************************* Do Tracking *********************************************%%
-
+% num = 3;
 for f = 1:num
     f
     img_color = imread([dataPath int2str(f) forMat]);
@@ -170,5 +170,5 @@ end
 
 %%******************************************* Save and Display Tracking Results *********************************************%%
 
-save([ title '2.mat'], 'result');
+save([ './result/' title '_2.mat'], 'result');
 % displayResult;                                                     % display the tracking results in the whole image sequence

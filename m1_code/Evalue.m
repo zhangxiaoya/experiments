@@ -9,7 +9,7 @@
 %     gt_centers(i,2) = groundtruth_rect(i,2) + groundtruth_rect(i,4)/2;
 % end
 % title = 'faceocc2';
-str = ['./images/gtmat/' title '_centers_gt.mat']; 
+str = ['../data/gtmat/' title '_centers_gt.mat']; 
 load(str);
 
 gtCenters(find(isnan(gtCenters) == 1)) = 0;
@@ -23,5 +23,5 @@ errs1 = sqrt(sum((res1Centers - gtCenters) .^ 2, 2));
 errs2 = sqrt(sum((res2Centers - gtCenters) .^ 2, 2));
 
 % save evalue result
-str = ['./images/evlRes/' title '_evlRes.mat'];
+str = ['./evaluation/' title '_evlRes.mat'];
 save(str,'errs1','errs2');
