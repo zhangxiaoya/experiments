@@ -2,7 +2,7 @@
 clear all;
 
 %*************************************************************
-% title = 'animal';  % good
+title = 'animal';  % good
 % title = 'board';   % good
 % title = 'car11';   % better little
 % title = 'caviar';
@@ -16,9 +16,15 @@ clear all;
 
 % title = 'soccer';   % good
 % title = 'football'; % good
-title = 'bolt';
+% title = 'bolt';
 
-dataPath = [ './images/' title '/img/'];
+archstr = computer('arch');
+if ~isempty(strfind(archstr,'win'))
+    dataPath = ['..\data\images\' title '\img\'];
+else if ~isempty(strfind(archstr,'glnx'))
+        dataPath = [ '../data/images/' title '/img/'];
+    end
+end
 
 demo;
 
