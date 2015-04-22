@@ -1,0 +1,11 @@
+
+clear all;
+% load gt file
+load('D:\CResearch\experiments\a15_SCM_wei_zhong_cvpr12\code\images\faceocc2\groundtruth_rect.txt');
+
+gt_centers = 
+
+% load result
+% load('faceocc2.mat');
+MakeCenters;
+
